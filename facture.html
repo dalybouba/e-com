@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Facture</title>
+    <link rel="stylesheet" href="css/style-invoice.css" />
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div id="logo">
+            <img src="img/logo.png">
+        </div>
+        <h1 id="invoiceRef"></h1>
+        <div id="company" class="clearfix">
+            <div>CrocoCoder</div>
+            <div>IMM Yasmine Towers,<br /> CUN, Tunisia</div>
+            <div>24 600 900</div>
+            <div><a href="abderrahmen@crococoder.com">abderrahmen@crococoder.com</a></div>
+        </div>
+        <div id="project">
+            <div><span>CLIENT</span> <span id="userName"></span></div>
+            <div><span>EMAIL</span> <span id="userEmail"></span></div>
+            <div><span>DATE</span> <span id="invoiceDate"></span></div>
+            <script>
+                clientInvoiceDetails();
+            </script>
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="service">Category</th>
+                    <th class="desc">Product</th>
+                    <th>PRICE</th>
+                    <th>QTY</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="orders">
+                <script>
+                    invoice();
+                </script>
+
+
+            </tbody>
+        </table>
+    </main>
+    <div class="center">
+        <button class="btnInvoice" onclick="window.print()">Print</button>
+    </div>
+</body>
+
+</html>
